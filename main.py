@@ -8,19 +8,45 @@ etch = Turtle()
 
 # TODO: Create functions for each key stroke
 
+
+def forwards():
+    pass
+
+
+def backwards():
+    pass
+
+
+def counter_clockwise():
+    pass
+
+
+def clockwise():
+    pass
+
+
+def clear_screen():
+    pass
+
+
 # TODO: Create key strokes for directions
+screen = Screen()
+screen.listen()
 
 # W is forwards
-etch.onclick()
+screen.onkey(key="w", fun=forwards)
+
 # S is backwards
-etch.onclick()
+screen.onkey(key="s", fun=backwards)
+
 # A is counter-clockwise
-etch.onclick()
+screen.onkey(key="a", fun=counter_clockwise)
+
 # D is clockwise
-etch.onclick()
+screen.onkey(key="d", fun=clockwise)
+
 # C, clears out the screen for a new drawing
-etch.onclick()
+screen.onkey(key="c", fun=clear_screen)
 
 
-screen = Screen()
 screen.exitonclick()
