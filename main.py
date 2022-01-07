@@ -6,7 +6,20 @@ from turtle import Turtle, Screen
 
 etch = Turtle()
 
+# TODO: Create functions for each key stroke
 
+# TODO: Create key strokes for directions
+
+# W is forwards
+etch.onclick()
+# S is backwards
+etch.onclick()
+# A is counter-clockwise
+etch.onclick()
+# D is clockwise
+etch.onclick()
+# C, clears out the screen for a new drawing
+etch.onclick()
 
 
 screen = Screen()
