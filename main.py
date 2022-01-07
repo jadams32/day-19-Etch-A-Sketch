@@ -5,48 +5,55 @@
 from turtle import Turtle, Screen
 
 etch = Turtle()
-
-# TODO: Create functions for each key stroke
+etch.speed("fastest")
 
 
 def forwards():
-    pass
+    """Moves the turtle forwards 15 paces."""
+    etch.forward(15)
 
 
 def backwards():
-    pass
+    """Moves the turtle backwards 15 paces."""
+    etch.back(15)
 
 
 def counter_clockwise():
-    pass
+    """Turns the turtle counter-clockwise 10 degrees."""
+    etch.left(10)
 
 
 def clockwise():
-    pass
+    """Turns the turtle counter 10 degrees."""
+    etch.right(10)
 
 
 def clear_screen():
-    pass
+    """Clears the screen and resets the turtle home."""
+    etch.clear()
+    etch.penup()
+    etch.home()
+    etch.pendown()
 
 
-# TODO: Create key strokes for directions
+# Initialize the screen and start to listen for keystrokes
 screen = Screen()
 screen.listen()
 
 # W is forwards
-screen.onkey(key="w", fun=forwards)
+screen.onkeypress(key="w", fun=forwards)
 
 # S is backwards
-screen.onkey(key="s", fun=backwards)
+screen.onkeypress(key="s", fun=backwards)
 
 # A is counter-clockwise
-screen.onkey(key="a", fun=counter_clockwise)
+screen.onkeypress(key="a", fun=counter_clockwise)
 
 # D is clockwise
-screen.onkey(key="d", fun=clockwise)
+screen.onkeypress(key="d", fun=clockwise)
 
 # C, clears out the screen for a new drawing
-screen.onkey(key="c", fun=clear_screen)
+screen.onkeypress(key="c", fun=clear_screen)
 
-
+# Exits the screen on clicking the x button, or the screen.
 screen.exitonclick()
